@@ -2,6 +2,7 @@ import { db } from "@/drizzle/db";
 import { patients } from "@/drizzle/schema";
 import { sql } from "drizzle-orm";
 import { ChevronDown, CirclePlus } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
 export default async function Home() {
@@ -55,7 +56,7 @@ export default async function Home() {
               href={`/patient/${patient.id}`}
               className="no-scrollbar flex h-[260px] w-[190px] flex-col gap-1 overflow-hidden overflow-y-scroll rounded-xl border border-neutral-200 bg-white text-neutral-800 shadow-md transition-all duration-300 ease-in-out hover:z-50 hover:border-neutral-300 hover:shadow-2xl"
             >
-              <div className="bg-neutral-200 rounded-lg min-h-[194px] mx-4 mt-4"></div>
+              <div className="min-h-[200px] overflow-hidden max-h-[200px] "> <Image alt="pfp" width={200} height={200} src={"/guy.jpg"}  /></div>
               <p className="max-w-full self-center break-words px-4 pt-2 pb-3 text-md w-full font-medium font-mono">
                 {patient.firstName} {patient.lastName}
               </p>

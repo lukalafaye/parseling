@@ -25,6 +25,7 @@ import {
 } from "@/components/ui/card";
 import { toast } from "@/hooks/use-toast";
 import pdfToText from "react-pdftotext";
+import { addPatientAction } from "@/app/_actions/add-patient";
 
 const formSchema = z.object({
   firstName: z.string().min(2, {
@@ -73,9 +74,9 @@ export function AddPatientForm() {
       ...values,
       files: fileTexts,
     };
-    console.log(dataToSubmit);
+    console.log(JSON.stringify(dataToSubmit));
 
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    await addPatientAction(dataToSubmit);
 
     setIsSubmitting(false);
     toast({
