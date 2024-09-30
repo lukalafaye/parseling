@@ -37,8 +37,8 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 ## Preview
 
-![fhe.jpg](fhe.jpg)
-![front.jpg](front.jpg)  
-![record-extract.png](record-extract.png)
+![fhe.jpg](img/fhe.jpg)
+![front.jpg](img/front.jpg)  
+![record-extract.png](img/record-extract.png)
 
 The medical record extractor and FHE demo apps can be found in [hfspaces](hfspaces).
